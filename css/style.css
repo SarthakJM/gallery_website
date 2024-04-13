@@ -1,0 +1,69 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gallery container */
+.gallery {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px; /* Padding around the gallery */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Individual image container */
+.col {
+    width: 300px; /* Width of each image container */
+    height: 300px; /* Height of each image container */
+    margin: 10px; /* Spacing between image containers */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Image styling */
+.gallery-item {
+    width: 100%; /* Ensure images take full width of their container */
+    height: 100%; /* Ensure images take full height of their container */
+    object-fit: cover; /* Scale images while preserving aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect */
+.gallery-item:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+}
+
+/* Modal image */
+#gallery-modal .modal-img {
+    max-width: 100%; /* Ensure modal image fits within the viewport */
+    max-height: 90vh; /* Limit modal image height to 90% of viewport height */
+    width: auto; /* Allow modal image to scale proportionally */
+    height: auto; /* Allow modal image to scale proportionally */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col {
+        margin-top: 50px;
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .col {
+        margin-top: 50px;
+        width: calc(100% - 20px); /* Adjust width for even smaller screens */
+    }
+}
